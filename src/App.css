@@ -54,7 +54,44 @@ img {
 }
 
 .menulink:hover {
-  color: #357960;
+  color: #3f51b5;
+}
+
+.footercontainer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  margin-top: 200px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background-color: #fafafa;
+}
+
+.footericons {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 40px;
+}
+
+.footericon {
+  font-size: 50px;
+  color: #808080;
+}
+
+.footericon:hover {
+  color: #3f51b5;
+}
+
+.copyright {
+  font-size: 10px;
+  float: right;
+  margin-right: 30px;
 }
 
 .desktopphotocontainer {
@@ -64,7 +101,6 @@ img {
 }
 
 .desktopleft {
-  background-color: #357960;
   height: 600px;
   width: 450px;
   animation: fadeIn 4s;
@@ -202,6 +238,11 @@ img {
 
 .desktophomecontainer {
   margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .homefeaturecontainer {
@@ -213,6 +254,7 @@ img {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 8px;
   column-gap: 15px;
+  margin-bottom: 40px;
 }
 
 .minifeaturethumbnails {
@@ -228,6 +270,40 @@ img {
 }
 
 .minifeaturethumbnails:hover {
+  filter: none;
+    -webkit-filter: grayscale(80%);
+    -moz-filter:    grayscale(80%);
+    -ms-filter:     grayscale(80%);
+    -o-filter:      grayscale(80%);
+    transition: transform .5s ease;
+}
+
+.mobilehomecontainer {
+  margin-top: 70px;
+}
+
+.mobilefeaturecontainer {
+  display: grid;
+  margin: 0px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 0px;
+  column-gap: 0px;
+  margin-bottom: 40px;
+}
+
+.mobilefeatureimg {
+  height: auto;
+  width: 25vw;
+  object-fit: cover;
+  transition: transform .5s ease;
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+
+.mobilefeatureimg:hover {
   filter: none;
     -webkit-filter: grayscale(80%);
     -moz-filter:    grayscale(80%);

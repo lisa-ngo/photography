@@ -1,5 +1,5 @@
 import './App.css';
-// import goldendesktop from './data/goldendesktop.js';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import {
   BrowserRouter,
@@ -11,19 +11,31 @@ import Home from './pages/Home';
 import Golden from './pages/Golden';
 
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#3f51b5',
+    },
+  },
+});
 
 function App() {
   return (
     <>
-    <div className="App">
-    <BrowserRouter>
-    <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/goldensundown" element={<Golden />}/>
-      </Routes>
-    </BrowserRouter>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+      <BrowserRouter>
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/goldensundown" element={<Golden />}/>
+        </Routes>
+      <Footer/>
+      </BrowserRouter>
+      </div>
+    </ThemeProvider>
     </>
   );
 }
