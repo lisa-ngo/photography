@@ -21,10 +21,16 @@ export default function Golden () {
   
   // window resize management
   const [width, setWidth]   = React.useState(window.innerWidth);  
-  
+  const [isDesktop, setIsDesktop] = React.useState(true);
+
   const updateWidth = () => {
     setWidth(window.innerWidth);
-    console.log(width);
+    if (window.innerWidth > 1100) {
+      setIsDesktop(true);
+    }
+    else {
+      setIsDesktop(false);
+    }
   }
 
   React.useEffect(() => {
@@ -55,7 +61,7 @@ export default function Golden () {
 
   // if set golden is false --> change pictures to sundown
   React.useEffect(() => {
-    if (width > 1100) {
+    if (isDesktop === true) {
       if (golden === true) {
         setPictures(goldendesktop);
         setSelectedImg(goldendesktop[getRandomInt(18)])
@@ -73,7 +79,7 @@ export default function Golden () {
         setPictures(sundownmobile);
       }
     }
-  }, [golden, width])
+  }, [golden, isDesktop])
 
   return <>
     <div className="pagecontainer">
@@ -81,7 +87,7 @@ export default function Golden () {
       ? (<h1>Golden</h1>)
       : (<h1>Sundown</h1>) }
       <GoldenSetSwitch setGolden={setGolden} golden={golden}/>
-      {width > 1100
+      {isDesktop === true
       ? (<div>
           <div className="desktopphotocontainer">
             <div className="desktopleft">
