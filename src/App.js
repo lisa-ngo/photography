@@ -9,7 +9,6 @@ import {
 
 import Home from './pages/Home';
 import Golden from './pages/Golden';
-import Sundown from './pages/Sundown';
 
 import Navbar from './components/Navbar'
 

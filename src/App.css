@@ -199,3 +199,39 @@ img {
     -o-filter:      grayscale(80%);
     transition: transform .5s ease;
 }
+
+.desktophomecontainer {
+  margin-top: 70px;
+}
+
+.homefeaturecontainer {
+  height: 500px;
+  width: 1000px;
+  display: grid;
+  margin: 0px;
+  padding: 0px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 8px;
+  column-gap: 15px;
+}
+
+.minifeaturethumbnails {
+  height: 245px;
+  width: 245px;
+  object-fit: cover;
+  transition: transform .5s ease;
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+
+.minifeaturethumbnails:hover {
+  filter: none;
+    -webkit-filter: grayscale(80%);
+    -moz-filter:    grayscale(80%);
+    -ms-filter:     grayscale(80%);
+    -o-filter:      grayscale(80%);
+    transition: transform .5s ease;
+}

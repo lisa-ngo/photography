@@ -20,11 +20,9 @@ export default function Golden () {
   const  [golden, setGolden] = React.useState(true);
   
   // window resize management
-  const [width, setWidth]   = React.useState(window.innerWidth);  
   const [isDesktop, setIsDesktop] = React.useState(true);
 
   const updateWidth = () => {
-    setWidth(window.innerWidth);
     if (window.innerWidth > 1100) {
       setIsDesktop(true);
     }
@@ -91,7 +89,7 @@ export default function Golden () {
       ? (<div>
           <div className="desktopphotocontainer">
             <div className="desktopleft">
-              <img src={selectedImg.url} alt="sunset"/>
+              <img src={selectedImg.url} alt={selectedImg.alt}/>
             </div>
             <div className="desktopright">
               { pictures.map((thumbnail) => (
@@ -123,7 +121,7 @@ export default function Golden () {
               <div key={thumbnail.id} >
                 <img className="mobilethumbnailimg" 
                   src={thumbnail.url} 
-                  alt="sunset"/>
+                  alt={thumbnail.alt}/>
               </div>
             )) }
           </div>
