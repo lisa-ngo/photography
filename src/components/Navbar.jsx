@@ -10,6 +10,7 @@ export default function Navbar () {
       <nav className="menulinks">
         <Link to="/" className="menulink">home</Link>
         <Link to="/goldensundown" className="menulink">golden sundown</Link>
+        <Link to="/mapview" className="menulink">photo map</Link>
       </nav>
     </header>
   </>

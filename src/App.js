@@ -9,6 +9,7 @@ import {
 
 import Home from './pages/Home';
 import Golden from './pages/Golden';
+import MapView from './pages/MapView';
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -31,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/goldensundown" element={<Golden />}/>
+          <Route path="/mapview" element={<MapView />}/>
         </Routes>
       <Footer/>
       </BrowserRouter>
