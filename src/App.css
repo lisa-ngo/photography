@@ -1,38 +1,201 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pagecontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.menubar {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  z-index: 9999;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menulinks {
+  float: right;
+  margin-right: 20px;
+  vertical-align: middle;
+  line-height: 80px;
+  display: flex;
+  gap: 20px;
+}
+
+.menulink {
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
+}
+
+.menulink:hover {
+  color: #357960;
+}
+
+.desktopphotocontainer {
+  margin-top: 70px;
+  display: flex;
+  gap: 20px;
+}
+
+.desktopleft {
+  background-color: #357960;
+  height: 600px;
+  width: 450px;
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.desktopright {
+  height: 600px;
+  width: 600px;
+  display: grid;
+  margin: 0px;
+  padding: 0px;
+  row-gap: 11px;
+  column-gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.desktopright::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.thumbnailimg {
+  height: 188px;
+  width: 188px;
+  object-fit: cover;
+  transition: transform .5s ease;
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+
+.thumbnailimg:hover {
+  filter: none;
+    -webkit-filter: grayscale(80%);
+    -moz-filter:    grayscale(80%);
+    -ms-filter:     grayscale(80%);
+    -o-filter:      grayscale(80%);
+    transition: transform .5s ease;
+}
+
+.desktopcaption {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  animation: fadeIn linear 4s;
+  -webkit-animation: fadeIn linear 4s;
+  -moz-animation: fadeIn linear 4s;
+  -o-animation: fadeIn linear 4s;
+  -ms-animation: fadeIn linear 4s;
+}
+
+.captionleft {
+  height: 100px;
+  width: 450px;
+}
+
+.captiondatetime {
+  font-size: 12px;
+}
+
+.captionright {
+  font-size: 12px;
+  color: #a9a9a9;
+  text-align: right;
+  height: 100px;
+  width: 600px;
+}
+
+.mobilecontainer {
+  margin-top: 70px;
+}
+
+.mobileimgcontainer {
+  display: grid;
+  margin: 0px;
+  padding: 0px;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 8px;
+  column-gap: 15px;
+}
+
+.mobilethumbnailimg {
+  height: 40vw;
+  width: 40vw;
+  object-fit: cover;
+  transition: transform .5s ease;
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+
+.mobilethumbnailimg:hover {
+  filter: none;
+    -webkit-filter: grayscale(80%);
+    -moz-filter:    grayscale(80%);
+    -ms-filter:     grayscale(80%);
+    -o-filter:      grayscale(80%);
+    transition: transform .5s ease;
 }
